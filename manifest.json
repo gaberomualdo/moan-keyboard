@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "MoanKeyboard",
+  "description": "Moaning noises as you type. Best Chrome extension ever made.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Moaning noises as you type. Best Chrome extension ever made."
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["popup.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "https://freesound.org/data/previews/439/439559_9018380-lq.mp3"
+  ]
+}
